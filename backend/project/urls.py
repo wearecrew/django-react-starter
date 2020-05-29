@@ -1,4 +1,4 @@
-"""django_react_starter URL Configuration
+"""project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+
+from core.views import home
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", home, name="home"),
+    path("admin/", admin.site.urls),
 ]
+
+if settings.DEBUG:
+    # pylint: disable=ungrouped-imports
+    from django.conf.urls.static import static
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+    # Serve static and media files from development server
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
