@@ -1,0 +1,52 @@
+{
+    "name": "django-react-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "NODE_ENV=development webpack --config ./frontend/webpack.config.js --mode development --watch",
+        "build": "NODE_ENV=production webpack --config ./frontend/webpack.config.js  --mode production",
+        "lint:js": "npx eslint frontend/js/",
+        "lint:scss": "npx stylelint frontend/scss/",
+        "lint:py": "pylint backend",
+        "lint": "npm run lint:js && npm run lint:scss && npm run lint:py"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.10.1",
+        "@babel/core": "^7.10.1",
+        "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+        "@babel/preset-env": "^7.10.1",
+        "@babel/preset-react": "^7.10.1",
+        "autoprefixer": "^9.8.0",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "browser-sync": "^2.26.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "css-loader": "^3.5.3",
+        "cssnano": "^4.1.10",
+        "eslint": "^7.1.0",
+        "eslint-plugin-react": "^7.20.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.14.1",
+        "postcss-flexbugs-fixes": "^4.2.1",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.2",
+        "stylelint": "^13.5.0",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-config-recommended-scss": "^4.2.0",
+        "stylelint-declaration-use-variable-or-custom-fn": "^1.0.1",
+        "stylelint-number-z-index-constraint": "^2.0.0",
+        "stylelint-order": "^4.0.0",
+        "stylelint-scss": "^3.17.2",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-fix-style-only-entries": "^0.5.0"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    }
+}

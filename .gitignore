@@ -1,4 +1,5 @@
+.DS_Store
 /.venv
 /backend/db.sqlite3
-/.DS_Store
-/backend/.DS_Store
+/backend/project/static
+/node_modules

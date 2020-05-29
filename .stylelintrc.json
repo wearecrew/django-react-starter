@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "stylelint-config-recommended",
+        "stylelint-config-recommended-scss"
+    ],
+    "ignoreFiles": ["dist/*.css"],
+    "plugins": [
+        "stylelint-order",
+        "stylelint-number-z-index-constraint",
+        "stylelint-declaration-use-variable-or-custom-fn"
+    ],
+    "rules": {
+        "block-no-empty": null,
+        "declaration-no-important": null,
+        "no-descending-specificity": null,
+        "order/order": ["custom-properties", "declarations"],
+        "order/properties-alphabetical-order": [
+            true,
+            {
+                "severity": "warning"
+            }
+        ],
+        "plugin/number-z-index-constraint": {
+            "max": 10,
+            "min": 0
+        },
+        "selector-nested-pattern": "^&",
+        "selector-pseudo-element-colon-notation": "double",
+        "string-quotes": "double",
+        "unit-whitelist": ["deg", "rem", "vh", "vw", "%", "ms", "px", "fr"]
+    }
+}
