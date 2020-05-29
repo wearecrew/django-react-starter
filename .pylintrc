@@ -1,0 +1,19 @@
+[MASTER]
+ignore=migrations
+
+[MESSAGES CONTROL]
+disable=duplicate-code,fixme,invalid-name,missing-docstring,no-member,unused-argument,unused-wildcard-import,wildcard-import,too-few-public-methods
+
+[MISCELLANEOUS]
+max-line-length=100
+
+[DESIGN]
+max-parents=15
+max-args=10
+max-locals=30
+
+[REPORTS]
+output-format=colorized
+
+[ELIF]
+max-nested-blocks=8
